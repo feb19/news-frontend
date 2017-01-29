@@ -1,17 +1,6 @@
 <template>
   <div class="list">
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
+    <p><router-link to="/news20170130">20170130</router-link></p>
   </div>
 </template>
 
-<script>
-  export default {
-    props: {
-      href: String,
-      required: true
-    }
-  }
-</script>

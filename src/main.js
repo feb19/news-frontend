@@ -1,27 +1,24 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import routes from './Routes'
+import VueRouter from 'vue-router'
+import Home from './pages/Home'
+import NewsItem from './pages/NewsItem'
+import News20170130 from './pages/News20170130'
+
+Vue.use(VueRouter)
+
+const routes = [
+  { path: '/', component: Home },
+  { path: '/detail', component: NewsItem },
+  { path: '/News20170130', component: News20170130 }
+]
+const router = new VueRouter({
+  routes
+})
 
 /* eslint-disable no-new */
-const app = new Vue({
+new Vue({
   el: '#app',
-  data: {
-    currentRoute: window.location.pathname
-  },
-  computed: {
-    ViewComponent () {
-      const matchingView = routes[this.currentRoute]
-      console.log(routes)
-      return matchingView
-        ? require('./pages/' + matchingView + '.vue')
-        : require('./pages/404.vue')
-    }
-  },
-  render (h) {
-    return h(this.ViewComponent)
-  }
-})
-window.addEventListener('popstate', () => {
-  app.currentRoute = window.location.pathname
+  router
 })

@@ -2,23 +2,14 @@
   <div class="container">
     <ul>
       <li>
-        <v-link href="/">Home</v-link>
-        <v-link href="/detail">About</v-link>
+        <router-link to="/">Home</router-link>
+        <router-link to="/detail">About</router-link>
       </li>
     </ul>
 
     <slot></slot>
   </div>
 </template>
-
-<script>
-  import VLink from '../components/VLink.vue'
-  export default {
-    components: {
-      VLink
-    }
-  }
-</script>
 
 <style scoped>
   .container {
