@@ -1,9 +1,9 @@
 <template>
   <main-layout>
-    <p>特別なお知らせ</p>
-    <p>最新のお知らせ</p>
+    <div class="section-header">特別なお知らせ</div>
+    <div class="section-header">最新のお知らせ</div>
     <news-list></news-list>
-    <p>これ以前のお知らせを見る</p>
+    <!-- <p>これ以前のお知らせを見る</p> -->
   </main-layout>
 </template>
 
@@ -18,3 +18,11 @@
   }
 </script>
 
+<style scoped>
+  .section-header {
+    font-size: 15px;
+    color: #616161;
+    margin: 0;
+    padding: 32px 8px 4px 8px;
+  }
+</style>
