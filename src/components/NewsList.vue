@@ -5,7 +5,7 @@
       <div class="list-image"><img src="../assets/icon_error.svg"></div>
       <div>
         <div class="list-title">title</div>
-        <div class="list-date">2017年1月30日 12;00</div>
+        <div class="list-date">2017年1月30日 12:00</div>
       </div>
     </router-link>
 
@@ -13,7 +13,23 @@
       <div class="list-image"><img src="../assets/icon_info.svg"></div>
       <div>
         <div class="list-title">title</div>
-        <div class="list-date">2017年1月30日 12;00</div>
+        <div class="list-date">2017年1月30日 12:00</div>
+      </div>
+    </router-link>
+
+    <router-link class="list-item" to="/news20170130">
+      <div class="list-image"><img src="../assets/icon_upgrade.svg"></div>
+      <div>
+        <div class="list-title">title</div>
+        <div class="list-date">2017年1月30日 12:00</div>
+      </div>
+    </router-link>
+
+    <router-link class="list-item" to="/news20170130">
+      <div class="list-image"><img src="../assets/icon_maintenance.svg"></div>
+      <div>
+        <div class="list-title">title</div>
+        <div class="list-date">2017年1月30日 12:00</div>
       </div>
     </router-link>
 
@@ -22,7 +38,7 @@
   </div>
 </template>
 
-<style scoped>
+<style>
   .list {
     background-color: white;
   }
@@ -38,8 +54,10 @@
   }
   .list-single {
     font-size: 16px;
+    height: 28px;
     color: black;
-    height: 50px;
+    display: flex;
+    align-items: center;
   }
   .list-item img {
     margin: 0 auto;
